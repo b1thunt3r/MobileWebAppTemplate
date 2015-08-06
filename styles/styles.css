@@ -50,6 +50,7 @@ html {
   display: inline-block;
   padding: 0 0.5rem;
   z-index: 1100;
+  cursor: pointer;
 }
 .main-wrapper .main-content {
   margin: 0.5rem;
