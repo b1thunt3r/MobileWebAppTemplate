@@ -1,0 +1,200 @@
+@import "components/_variables.less";
+@import "components/_fonts.less";
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
+body, html, header, div, nav, main, ul, li, h1, h2, p, input, label, span {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-size: @fontSize;
+  line-height: @lineHeigh;
+  background-color: @backColor;
+  color: @textColor;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main-wrapper {
+  height: 100%;
+  .top-header {
+    height: @topHeight;
+    line-height: @topHeight;
+    background-color: @topBackColor;
+    color: @topTextColor;
+    padding: 0 @padding;
+    font-family: 'Roboto Condensed', sans-serif;
+    z-index: 10000;
+
+    h1 {
+      font-size: @topFontSize;
+      display: inline;
+    }
+
+    .nav-icon {
+      position: absolute;
+      right: 0;
+      display: inline-block;
+      padding: 0 @padding;
+      z-index: 1100;
+    }
+  }
+
+  .main-content {
+    margin: @margin;
+
+    h2, p, div, input, select, ul {
+      margin-bottom: @margin;
+    }
+
+    div.card, ul {
+      box-shadow: 0 2px 5px 0 @cardShadowColor;
+      background-color: @cardBackColor;
+      padding: @padding;
+    }
+
+    input, select {
+      height: @lineHeigh;
+      line-height: @lineHeigh;
+      font-size: 1rem;
+      width: 100%;
+      border: 1px solid @textColor;
+      padding: 0 @padding;
+      vertical-align: text-bottom;
+    }
+
+    select {
+      background-color: #ffffff;
+    }
+
+    input, select, div.group {
+      border-radius: 0.25rem;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 99%;
+    }
+
+    input[type="checkbox"], input[type="radio"] {
+      width: 0.9rem;
+      vertical-align: text-top;
+    }
+
+    input[type="button"], input[type="submit"], input[type="reset"] {
+      background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%);
+
+      &:active {
+        background: linear-gradient(to top,  #e5e5e5 0%,#d0d0d0 100%);
+      }
+    }
+
+    div.group {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      border: 1px solid @textColor;
+      overflow: hidden;
+
+      span {
+        display: table-cell;
+        border-right: 1px solid @textColor;
+        line-height: 1.2rem;
+
+        &:last-child {
+          border-right: none;
+        }
+
+        input {
+          border: none;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+        }
+      }
+      input[type="checkbox"], input[type="radio"] {
+        display: none;
+
+        & + label {
+          display: table-cell;
+          text-align: center;
+          background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%);
+          font-size: 1rem;
+          line-height: @lineHeigh;
+          border-right: 1px solid @textColor ;
+
+          &:last-child {
+            border: none;
+          }
+        }
+
+        &:checked + label {
+          background: linear-gradient(to bottom,  #e5e5e5 0%,#d0d0d0 100%);
+        }
+      }
+    }
+
+    & > ul {
+      list-style: none;
+
+      label {
+        display: inline-block;
+        width: 35%;
+
+        & ~ input[type="text"] {
+          width: 60%;
+          float: right;
+        }
+      }
+    }
+  }
+}
+.main-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  background: linear-gradient(to bottom,  @topBackColor 0%, @topBackColor @topHeight, @menuBackColor @topHeight, @menuBackColor 100%);
+  //background: linear-gradient(to bottom, @topBackColor 0%, rgba@topBackColor @topHeight, @menuBackColor @topHeight+1, @menuBackColor 100%);
+  z-index: 1000;
+  color: @menuTextColor;
+  min-height: 100%;
+  padding-top: @topHeight;
+  transition: width 0.5s ease 0s;
+
+  &.show {
+    width: 75%;
+
+    ul {
+      li {
+        display: block;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      padding: @menuPadding @menuPadding 0;
+      display: none;
+      width: @menuItemWidth;
+
+      &:last-child {
+        padding-bottom: @menuPadding;
+      }
+
+      &.header {
+        color: @menuHeaderColor;
+        font-weight: bold;
+      }
+
+      a {
+        color: @menuTextColor;
+        text-decoration: none;
+      }
+    }
+  }
+}

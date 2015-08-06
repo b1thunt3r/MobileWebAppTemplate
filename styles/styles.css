@@ -1,0 +1,197 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:700|Open+Sans:400,700);
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+body,
+html,
+header,
+div,
+nav,
+main,
+ul,
+li,
+h1,
+h2,
+p,
+input,
+label,
+span {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.8rem;
+  background-color: #eeeeee;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+}
+.main-wrapper {
+  height: 100%;
+}
+.main-wrapper .top-header {
+  height: 3.5rem;
+  line-height: 3.5rem;
+  background-color: #000000;
+  color: #eeeeee;
+  padding: 0 0.5rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  z-index: 10000;
+}
+.main-wrapper .top-header h1 {
+  font-size: 1.5rem;
+  display: inline;
+}
+.main-wrapper .top-header .nav-icon {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  padding: 0 0.5rem;
+  z-index: 1100;
+}
+.main-wrapper .main-content {
+  margin: 0.5rem;
+}
+.main-wrapper .main-content h2,
+.main-wrapper .main-content p,
+.main-wrapper .main-content div,
+.main-wrapper .main-content input,
+.main-wrapper .main-content select,
+.main-wrapper .main-content ul {
+  margin-bottom: 0.5rem;
+}
+.main-wrapper .main-content div.card,
+.main-wrapper .main-content ul {
+  box-shadow: 0 2px 5px 0 #aeaeae;
+  background-color: #e1e1e1;
+  padding: 0.5rem;
+}
+.main-wrapper .main-content input,
+.main-wrapper .main-content select {
+  height: 1.8rem;
+  line-height: 1.8rem;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 0 0.5rem;
+  vertical-align: text-bottom;
+}
+.main-wrapper .main-content select {
+  background-color: #ffffff;
+}
+.main-wrapper .main-content input,
+.main-wrapper .main-content select,
+.main-wrapper .main-content div.group {
+  border-radius: 0.25rem;
+}
+.main-wrapper .main-content input[type="text"],
+.main-wrapper .main-content input[type="password"] {
+  width: 99%;
+}
+.main-wrapper .main-content input[type="checkbox"],
+.main-wrapper .main-content input[type="radio"] {
+  width: 0.9rem;
+  vertical-align: text-top;
+}
+.main-wrapper .main-content input[type="button"],
+.main-wrapper .main-content input[type="submit"],
+.main-wrapper .main-content input[type="reset"] {
+  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+}
+.main-wrapper .main-content input[type="button"]:active,
+.main-wrapper .main-content input[type="submit"]:active,
+.main-wrapper .main-content input[type="reset"]:active {
+  background: linear-gradient(to top, #e5e5e5 0%, #d0d0d0 100%);
+}
+.main-wrapper .main-content div.group {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border: 1px solid #000000;
+  overflow: hidden;
+}
+.main-wrapper .main-content div.group span {
+  display: table-cell;
+  border-right: 1px solid #000000;
+  line-height: 1.2rem;
+}
+.main-wrapper .main-content div.group span:last-child {
+  border-right: none;
+}
+.main-wrapper .main-content div.group span input {
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.main-wrapper .main-content div.group input[type="checkbox"],
+.main-wrapper .main-content div.group input[type="radio"] {
+  display: none;
+}
+.main-wrapper .main-content div.group input[type="checkbox"] + label,
+.main-wrapper .main-content div.group input[type="radio"] + label {
+  display: table-cell;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  font-size: 1rem;
+  line-height: 1.8rem;
+  border-right: 1px solid #000000;
+}
+.main-wrapper .main-content div.group input[type="checkbox"] + label:last-child,
+.main-wrapper .main-content div.group input[type="radio"] + label:last-child {
+  border: none;
+}
+.main-wrapper .main-content div.group input[type="checkbox"]:checked + label,
+.main-wrapper .main-content div.group input[type="radio"]:checked + label {
+  background: linear-gradient(to bottom, #e5e5e5 0%, #d0d0d0 100%);
+}
+.main-wrapper .main-content > ul {
+  list-style: none;
+}
+.main-wrapper .main-content > ul label {
+  display: inline-block;
+  width: 35%;
+}
+.main-wrapper .main-content > ul label ~ input[type="text"] {
+  width: 60%;
+  float: right;
+}
+.main-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  background: linear-gradient(to bottom, #000000 0%, #000000 3.5rem, #262626 3.5rem, #262626 100%);
+  z-index: 1000;
+  color: #e1e1e1;
+  min-height: 100%;
+  padding-top: 3.5rem;
+  transition: width 0.5s ease 0s;
+}
+.main-nav.show {
+  width: 75%;
+}
+.main-nav.show ul li {
+  display: block;
+}
+.main-nav ul {
+  list-style: none;
+}
+.main-nav ul li {
+  padding: 1rem 1rem 0;
+  display: none;
+  width: 240px;
+}
+.main-nav ul li:last-child {
+  padding-bottom: 1rem;
+}
+.main-nav ul li.header {
+  color: #fbfbfb;
+  font-weight: bold;
+}
+.main-nav ul li a {
+  color: #e1e1e1;
+  text-decoration: none;
+}
