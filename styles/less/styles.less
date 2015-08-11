@@ -1,6 +1,7 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
 @import "components/_variables.less";
 @import "components/_fonts.less";
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+@import "components/_mainnav.less";
 
 body, html, header, div, nav, main, ul, li, h1, h2, p, input, label, span {
   box-sizing: border-box;
@@ -148,53 +149,6 @@ body, html {
           width: 60%;
           float: right;
         }
-      }
-    }
-  }
-}
-.main-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  background: linear-gradient(to bottom,  @topBackColor 0%, @topBackColor @topHeight, @menuBackColor @topHeight, @menuBackColor 100%);
-  //background: linear-gradient(to bottom, @topBackColor 0%, rgba@topBackColor @topHeight, @menuBackColor @topHeight+1, @menuBackColor 100%);
-  z-index: 1000;
-  color: @menuTextColor;
-  min-height: 100%;
-  padding-top: @topHeight;
-  transition: width 0.5s ease 0s;
-
-  &.show {
-    width: 75%;
-
-    ul {
-      li {
-        display: block;
-      }
-    }
-  }
-
-  ul {
-    list-style: none;
-
-    li {
-      padding: @menuPadding @menuPadding 0;
-      display: none;
-      width: @menuItemWidth;
-
-      &:last-child {
-        padding-bottom: @menuPadding;
-      }
-
-      &.header {
-        color: @menuHeaderColor;
-        font-weight: bold;
-      }
-
-      a {
-        color: @menuTextColor;
-        text-decoration: none;
       }
     }
   }
