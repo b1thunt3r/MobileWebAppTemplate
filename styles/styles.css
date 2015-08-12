@@ -1,42 +1,5 @@
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Open+Sans:400,700);
-.main-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  background: linear-gradient(to bottom, #000000 0%, #000000 3.5rem, #262626 3.5rem, #262626 100%);
-  z-index: 1000;
-  color: #e1e1e1;
-  min-height: 100%;
-  padding-top: 3.5rem;
-  transition: width 0.5s ease 0s;
-}
-.main-nav.show {
-  width: 75%;
-}
-.main-nav.show ul li {
-  display: block;
-}
-.main-nav ul {
-  list-style: none;
-}
-.main-nav ul li {
-  padding: 1rem 1rem 0;
-  display: none;
-  width: 240px;
-}
-.main-nav ul li:last-child {
-  padding-bottom: 1rem;
-}
-.main-nav ul li.header {
-  color: #fbfbfb;
-  font-weight: bold;
-}
-.main-nav ul li a {
-  color: #e1e1e1;
-  text-decoration: none;
-}
 body,
 html,
 header,
@@ -195,4 +158,41 @@ html {
 .main-wrapper .main-content > ul label ~ input[type="text"] {
   width: 60%;
   float: right;
+}
+.main-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  background: linear-gradient(to bottom, #000000 0%, #000000 3.5rem, #262626 3.5rem, #262626 100%);
+  z-index: 1000;
+  color: #e1e1e1;
+  min-height: 100%;
+  padding-top: 3.5rem;
+  transition: width 0.5s ease 0s;
+}
+.main-nav.show {
+  width: 75%;
+}
+.main-nav.show ul li {
+  display: block;
+}
+.main-nav ul {
+  list-style: none;
+}
+.main-nav ul li {
+  padding: 1rem 1rem 0;
+  display: none;
+  width: 240px;
+}
+.main-nav ul li:last-child {
+  padding-bottom: 1rem;
+}
+.main-nav ul li.header {
+  color: #fbfbfb;
+  font-weight: bold;
+}
+.main-nav ul li a {
+  color: #e1e1e1;
+  text-decoration: none;
 }
