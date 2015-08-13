@@ -1,5 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Open+Sans:400,700");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Open+Sans:400,700);
 body,
 html,
 header,
@@ -27,6 +27,13 @@ html {
   background-color: #eeeeee;
   color: #000000;
   font-family: 'Open Sans', sans-serif;
+}
+body {
+  max-width: 480px;
+  min-width: 320px;
+}
+html {
+  background-color: black;
 }
 .main-wrapper {
   height: 100%;
