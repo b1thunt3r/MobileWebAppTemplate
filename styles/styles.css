@@ -37,6 +37,9 @@ html {
 }
 .main-wrapper {
   height: 100%;
+  width: 100%;
+  min-width: 320px;
+  max-width: 480px;
 }
 .main-wrapper .top-header {
   height: 3.5rem;
