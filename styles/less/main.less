@@ -14,20 +14,15 @@ body, html {
   font-family: 'Open Sans', sans-serif;
 }
 
-body {
-  max-width: 480px;
-  min-width: 320px;
-}
-
-html {
-  background-color: black;
-}
-
 .main-wrapper {
   height: 100%;
-  width: 100%;
-  min-width: 320px;
-  max-width: 480px;
+
+  &, & .top-header {
+    width: 100%;
+    min-width: 320px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
 
   .top-header {
     height: @topHeight;
@@ -37,6 +32,8 @@ html {
     padding: 0 @padding;
     font-family: 'Roboto Condensed', sans-serif;
     z-index: 10000;
+    position: fixed;
+    top: 0;
 
     h1 {
       font-size: @topFontSize;
@@ -55,6 +52,7 @@ html {
 
   .main-content {
     margin: @margin;
+    margin-top: @topHeight;
 
     h2, p, div, input, select, ul {
       margin-bottom: @margin;

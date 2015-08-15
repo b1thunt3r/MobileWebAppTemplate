@@ -28,18 +28,15 @@ html {
   color: #000000;
   font-family: 'Open Sans', sans-serif;
 }
-body {
-  max-width: 480px;
-  min-width: 320px;
-}
-html {
-  background-color: black;
-}
 .main-wrapper {
   height: 100%;
+}
+.main-wrapper,
+.main-wrapper .top-header {
   width: 100%;
   min-width: 320px;
   max-width: 480px;
+  margin: 0 auto;
 }
 .main-wrapper .top-header {
   height: 3.5rem;
@@ -49,6 +46,8 @@ html {
   padding: 0 0.5rem;
   font-family: 'Roboto Condensed', sans-serif;
   z-index: 10000;
+  position: fixed;
+  top: 0;
 }
 .main-wrapper .top-header h1 {
   font-size: 1.5rem;
@@ -64,6 +63,7 @@ html {
 }
 .main-wrapper .main-content {
   margin: 0.5rem;
+  margin-top: 3.5rem;
 }
 .main-wrapper .main-content h2,
 .main-wrapper .main-content p,
@@ -183,6 +183,11 @@ html {
 }
 .main-nav.show {
   width: 75%;
+}
+@media (min-width: 480px) {
+  .main-nav.show {
+    width: 320px;
+  }
 }
 .main-nav.show ul li {
   display: block;
