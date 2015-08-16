@@ -31,7 +31,7 @@ body, html {
     color: @topTextColor;
     padding: 0 @padding;
     font-family: 'Roboto Condensed', sans-serif;
-    z-index: 10000;
+    //z-index: 10000;
     position: fixed;
     top: 0;
 
@@ -40,13 +40,17 @@ body, html {
       display: inline;
     }
 
-    .nav-icon {
+    .nav-icon-wrapper {
       position: absolute;
       right: 0;
       display: inline-block;
       padding: 0 @padding;
-      z-index: 1100;
       cursor: pointer;
+
+      .nav-icon {
+        margin-left: 1.5rem;
+        font-size: 1.5rem;
+      }
     }
   }
 

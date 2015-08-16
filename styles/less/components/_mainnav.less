@@ -3,12 +3,11 @@
   top: 0;
   right: 0;
   width: 0;
-  background: linear-gradient(to bottom,  @topBackColor 0%, @topBackColor @topHeight, @menuBackColor @topHeight, @menuBackColor 100%);
+  background: @menuBackColor;
   //background: linear-gradient(to bottom, @topBackColor 0%, rgba@topBackColor @topHeight, @menuBackColor @topHeight+1, @menuBackColor 100%);
   z-index: 1000;
   color: @menuTextColor;
   min-height: 100%;
-  padding-top: @topHeight;
   transition: width 0.5s ease 0s;
 
   &.show {
@@ -21,6 +20,11 @@
         display: block;
       }
     }
+  }
+
+  .top {
+    height: @topHeight;
+    font-size: 1.5rem;
   }
 
   ul {

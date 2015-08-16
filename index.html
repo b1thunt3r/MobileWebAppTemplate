@@ -1,87 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-  <meta charset="UTF-8">
-  <title>Templatge Test</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link type="text/css" rel="stylesheet" href="styles/styles.css"/>
-  <script type="text/javascript" charset="utf-8" src="https://cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js"></script>
-  <script type="text/javascript" charset="utf-8" src="scripts/scripts.js"></script>
+    <meta charset="UTF-8">
+    <title>Templatge Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link type="text/css" rel="stylesheet" href="styles/styles.css"/>
+    <script type="text/javascript" charset="utf-8" src="https://cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/scripts.js"></script>
 </head>
 <body>
 <div class="main-wrapper">
-  <header class="top-header">
-    <h1>Title</h1>
-    <span class="nav-icon">
-      <i class="fa fa-bars"></i>
-    </span>
-  </header>
-  <main class="main-content">
-    <h2>Test</h2>
+    <header class="top-header">
+        <h1>Title</h1>
+        <span class="nav-icon-wrapper">
+            <span class="nav-icon edit">
+              <i class="fa fa-pencil"></i>
+            </span>
+            <span class="nav-icon menu">
+              <i class="fa fa-bars"></i>
+            </span>
+        </span>
+    </header>
+    <main class="main-content">
+        <h2>Test</h2>
 
-    <p>Test</p>
+        <p>Test</p>
 
-    <div>Test</div>
-    <div class="card">Test</div>
-    <ul>
-      <li>Test</li>
-      <li>Test</li>
-      <li>Test</li>
-      <li>
-        <label>Test</label>
+        <div>Test</div>
+        <div class="card">Test</div>
+        <ul>
+            <li>Test</li>
+            <li>Test</li>
+            <li>Test</li>
+            <li>
+                <label>Test</label>
+                <input type="text" placeholder="Test"/>
+            </li>
+            <li>
+                <input type="text" placeholder="Test"/>
+            </li>
+            <li>
+                <input type="radio"/> <label>Test</label>
+            </li>
+            <li>
+                <input type="checkbox"/> <label>Test</label>
+            </li>
+        </ul>
         <input type="text" placeholder="Test"/>
-      </li>
-      <li>
-        <input type="text" placeholder="Test"/>
-      </li>
-      <li>
-        <input type="radio"/> <label>Test</label>
-      </li>
-      <li>
-        <input type="checkbox"/> <label>Test</label>
-      </li>
-    </ul>
-    <input type="text" placeholder="Test"/>
-    <input type="text" value="Test"/>
-    <input type="button" value="Test"/>
+        <input type="text" value="Test"/>
+        <input type="button" value="Test"/>
 
-    <div class="group border">
-      <input type="radio" name="rd" id="rd1"/> <label for="rd1">Test</label>
-      <input type="radio" name="rd" id="rd2"/> <label for="rd2">Test</label>
-    </div>
-    <div class="group border">
-      <input type="checkbox" id="ch1"/> <label for="ch1">Test</label>
-      <input type="checkbox" id="ch2"/> <label for="ch2">Test</label>
-    </div>
-    <div class="group">
-      <span><input type="button" value="-10"></span>
-      <span><input type="button" value="-5"></span>
-      <span><input type="button" value="-1"></span>
-      <span><input value="0"></span>
-      <span><input type="button" value="+1"></span>
-      <span><input type="button" value="+5"></span>
-      <span><input type="button" value="+10"></span>
-    </div>
-    <select>
-      <option>Test</option>
-      <option>Test</option>
-      <option>Test</option>
-    </select>
-  </main>
+        <div class="group border">
+            <input type="radio" name="rd" id="rd1"/> <label for="rd1">Test</label>
+            <input type="radio" name="rd" id="rd2"/> <label for="rd2">Test</label>
+        </div>
+        <div class="group border">
+            <input type="checkbox" id="ch1"/> <label for="ch1">Test</label>
+            <input type="checkbox" id="ch2"/> <label for="ch2">Test</label>
+        </div>
+        <div class="group">
+            <span><input type="button" value="-10"></span>
+            <span><input type="button" value="-5"></span>
+            <span><input type="button" value="-1"></span>
+            <span><input value="0"></span>
+            <span><input type="button" value="+1"></span>
+            <span><input type="button" value="+5"></span>
+            <span><input type="button" value="+10"></span>
+        </div>
+        <select>
+            <option>Test</option>
+            <option>Test</option>
+            <option>Test</option>
+        </select>
+    </main>
 </div>
 <nav class="main-nav">
-  <ul>
-    <li class="header">Test</li>
-    <li><a href=".">Item</a></li>
-    <li><a href="#">Item</a></li>
-    <li><a href="#">Item</a></li>
-    <li class="header">Test</li>
-    <li><a href="#">Item</a></li>
-    <li><a href="#">Item</a></li>
-    <li><a href="#">Item</a></li>
-    <li><a href="#">Item</a></li>
-    <li><a href="#">Item</a></li>
-  </ul>
+    <ul>
+        <li class="top">
+            <span class="nav-icon-wrapper">
+                <span class="nav-icon menu">
+                  <i class="fa fa-times"></i>
+                </span>
+            </span>
+        </li>
+        <li class="header">Test</li>
+        <li><a href=".">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li class="header">Test</li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+    </ul>
 </nav>
 </body>
 </html>
