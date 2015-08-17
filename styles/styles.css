@@ -27,9 +27,11 @@ html {
   background-color: #eeeeee;
   color: #000000;
   font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
 }
 .main-wrapper {
   height: 100%;
+  overflow: auto;
 }
 .main-wrapper,
 .main-wrapper .top-header {
@@ -48,6 +50,9 @@ html {
   position: fixed;
   top: 0;
 }
+.main-wrapper .top-header.glued {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 .main-wrapper .top-header h1 {
   font-size: 1.5rem;
   display: inline;
@@ -62,6 +67,10 @@ html {
 .main-wrapper .top-header .nav-icon-wrapper .nav-icon {
   margin-left: 1.5rem;
   font-size: 1.5rem;
+}
+.main-wrapper .top-header .nav-icon-wrapper .nav-icon:focus,
+.main-wrapper .top-header .nav-icon-wrapper .nav-icon:active {
+  border: none;
 }
 .main-wrapper .main-content {
   margin: 0.5rem;
