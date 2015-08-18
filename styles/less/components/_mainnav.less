@@ -1,47 +1,44 @@
 .main-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
-  width: 0;
+  right: -100%;
   background: @menuBackColor;
   //background: linear-gradient(to bottom, @topBackColor 0%, rgba@topBackColor @topHeight, @menuBackColor @topHeight+1, @menuBackColor 100%);
   z-index: 1000;
   color: @menuTextColor;
-  min-height: 100%;
-  transition: width 0.5s ease 0s;
+  height: 100%;
+  transition: right 0.4s ease 0s;
+  overflow: hidden;
+  overflow-y: auto;
 
   &.show {
-    width: 75%;
-    @media (min-width: 480px) {
-      width: 320px;
-    }
-    ul {
-      li {
-        display: block;
-      }
-    }
+    right: 0;
   }
 
   .top {
     height: @topHeight;
-    font-size: 1.5rem;
+    line-height: @topHeight;
+    font-size: @topFontSize;
   }
 
   ul {
     list-style: none;
 
     li {
-      padding: @menuPadding @menuPadding 0;
-      display: none;
-      width: @menuItemWidth;
+      padding: 0 @menuPaddingX @menuPaddingY;
+      min-width: @menuMinWidth;
+      width: @menuWidth;
+      max-width: @menuMaxWidth;
+      line-height: @menuLineHeight;
 
       &:last-child {
-        padding-bottom: @menuPadding;
+        padding-bottom: @menuPaddingY;
       }
 
       &.header {
         color: @menuHeaderColor;
         font-weight: bold;
+        padding-top: @menuPaddingHeader;
       }
 
       a {

@@ -1,0 +1,89 @@
+body, html, header, div, nav, main, ul, li, h1, h2, p, input, label, span {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-size: @fontSize;
+  line-height: @lineHeight;
+  color: @textColor;
+  background-color: @bodyBackColor;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+}
+
+.main-wrapper {
+  height: 100%;
+  overflow: auto;
+  background-color: @backColor;
+
+  &, & .top-header {
+    width: 100%;
+    min-width: @minWidth;
+    max-width: @maxWidth;
+    margin: 0 auto;
+  }
+
+  .top-header {
+    height: @topHeight;
+    line-height: @topHeight;
+    background-color: @topBackColor;
+    color: @topTextColor;
+    padding: 0 @padding;
+    font-family: 'Roboto Condensed', sans-serif;
+    //z-index: 10000;
+    position: fixed;
+    top: 0;
+
+    &.glued {
+      background-color: @topBackColorGlued;
+    }
+
+    h1 {
+      font-size: @topFontSize;
+      display: inline;
+    }
+
+    .nav-icon-wrapper {
+      position: absolute;
+      right: 0;
+      display: inline-block;
+      padding: 0 @padding;
+      cursor: pointer;
+
+      .nav-icon {
+        margin-left: 1.5rem;
+        font-size: 1.5rem;
+
+        &:focus, &:active {
+          border: none;
+        }
+      }
+    }
+  }
+
+  .main-content {
+    padding: (@topHeight + @padding) @padding @padding;
+
+    h2, p, div, ul, > input {
+      margin-bottom: @margin;
+    }
+
+    div.card, ul {
+      box-shadow: 0 @cardVShadow @cardShadowBlur 0 @cardShadowColor;
+      background-color: @cardBackColor;
+      padding: @padding;
+
+      li {
+        padding: @padding / 4;
+      }
+    }
+
+    & > ul {
+      list-style: none;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+/* == Colors == */
+@textColor: lighten(#000000, 25%);
+@backColor: #eeeeec;
+@bodyBackColor: darken(@backColor, 25%);
+
+@topBackColor: darken(@textColor, 25%);
+@topBackColorGlued: fadeout(@topBackColor, 20%);
+@topTextColor: @backColor;
+
+@menuBackColor: lighten(@topBackColor, 15%);
+@menuHeaderColor: lighten(@topTextColor, 5%);
+@menuTextColor: darken(@menuHeaderColor, 10%);
+
+@cardBackColor: darken(@backColor, 5%);
+@cardShadowColor: darken(@backColor, 25%);
+
+@formElementCardBorderColor: lighten(@cardShadowColor, 15%);
+@formElementBorderColor: lighten(@cardShadowColor, 20%);
+@formElementFocusBorderColor: darken(@cardShadowColor, 5%);
+@formElementBackColor: lighten(@cardBackColor, 10%);
+@formCheckboxColor: darken(@cardShadowColor, 15%);
+@formButtonBackStart: #ffffff;
+@formButtonBackEnd: #e5e5e5;
+@formButtonActiveBackStart: @formButtonBackEnd;
+@formButtonActiveBackEnd: #d0d0d0;
+
+/* == Screen Sizes == */
+@minWidth: 320px;
+@maxWidth: 480px;
+
+/* == Sizes == */
+@fontSize: 16px;
+@lineHeight: 1.8rem;
+@fontSizeR: 1rem;
+
+@padding: 1rem;
+@margin: @padding;
+
+@borderWidth: 0.1rem;
+
+@topHeight: 3.5rem;
+@topFontSize: 1.5rem;
+
+@menuPaddingX: @padding * 2;
+@menuPaddingY: @padding;
+@menuLineHeight: 1.2rem;
+@menuPaddingHeader: 0.75rem;
+@menuMinWidth: @minWidth * 0.75;
+@menuWidth: @minWidth * 0.9;
+@menuMaxWidth: @minWidth * 1.125;
+
+@cardVShadow: 0.1rem;
+@cardShadowBlur: 0.2rem;
+
+@formCheckBoxWidth: 1.2rem;
+@formCheckBoxSize: 1.2rem;
+@formGroupLabelHeight: 1.2rem;
+@formInputPadding: @padding / 2;
+@formInputBorderRadius: @formInputPadding / 2;
+@formHeight: 2rem;
+@formLineHeight: @lineHeight;

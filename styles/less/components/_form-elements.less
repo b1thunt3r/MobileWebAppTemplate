@@ -1,0 +1,116 @@
+input, select {
+  height: @formHeight;
+  line-height: @formLineHeight;
+  font-size: @fontSizeR;
+  width: 100%;
+  border: @borderWidth solid @formElementBorderColor;
+  padding: 0 @formInputPadding;
+  vertical-align: text-bottom;
+  color: @textColor;
+  background-color: @formElementBackColor;
+
+  div.card &, ul & {
+    border: @borderWidth solid @formElementCardBorderColor;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input, select, div.group {
+  border-radius: @formInputBorderRadius;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  display: none;
+
+  & + label:before {
+    width: @formCheckBoxWidth;
+    content: '\f096';
+    display: inline-block;
+    font-family: FontAwesome, sans-serif;
+    vertical-align: middle;
+    color: @formCheckboxColor;
+  }
+
+  &:checked + label:before {
+    content: '\f046';
+  }
+}
+
+input[type="radio"] {
+  & + label:before {
+    content: '\f10c';
+  }
+  &:checked + label:before {
+     content: '\f192';
+   }
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+  background: linear-gradient(to bottom, @formButtonBackStart 0%, @formButtonBackEnd 100%);
+
+  &:active {
+    background: linear-gradient(to bottom, @formButtonActiveBackStart 0%, @formButtonActiveBackEnd 100%);
+  }
+}
+
+div.group {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border: @borderWidth solid @formElementBorderColor;
+  overflow: hidden;
+
+  span {
+    display: table-cell;
+    border-right: @borderWidth solid @formElementBorderColor;
+    line-height: @formGroupLabelHeight;
+    border-radius: 0;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    input {
+      border: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      border-radius: 0;
+
+      & + label {
+        display: none;
+      }
+    }
+  }
+  input[type="checkbox"], input[type="radio"] {
+    display: none;
+
+    & + label {
+      display: table-cell;
+      text-align: center;
+      background: linear-gradient(to bottom, @formButtonBackStart 0%, @formButtonBackEnd 100%);
+      font-size: @fontSizeR;
+      line-height: @lineHeight;
+      border-right: @borderWidth solid @formElementBorderColor ;
+
+      &:last-child {
+        border: none;
+      }
+      
+      &:before {
+        display: none;
+      }
+    }
+
+    &:checked + label {
+      background: linear-gradient(to bottom, @formButtonActiveBackStart 0%, @formButtonActiveBackEnd 100%);
+    }
+  }
+}
