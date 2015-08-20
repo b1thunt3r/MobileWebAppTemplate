@@ -102,17 +102,17 @@ html {
 .main-nav {
   position: fixed;
   top: 0;
-  right: -100%;
+  left: -100%;
   background: #262626;
   z-index: 1000;
   color: #e2e2df;
   height: 100%;
-  transition: right 0.4s ease 0s;
+  transition: left 0.4s ease 0s;
   overflow: hidden;
   overflow-y: auto;
 }
 .main-nav.show {
-  right: 0;
+  left: 0;
 }
 .main-nav .top {
   height: 3.5rem;
