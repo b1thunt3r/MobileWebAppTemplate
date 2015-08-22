@@ -61,6 +61,9 @@ html {
   font-size: 1.5rem;
   display: inline;
 }
+.main-wrapper .top-header h1.left-menu {
+  padding-left: 2rem;
+}
 .main-wrapper .top-header .nav-icon-wrapper {
   position: absolute;
   right: 0;
@@ -75,6 +78,13 @@ html {
 .main-wrapper .top-header .nav-icon-wrapper .nav-icon:focus,
 .main-wrapper .top-header .nav-icon-wrapper .nav-icon:active {
   border: none;
+}
+.main-wrapper .top-header .nav-icon-wrapper.left {
+  left: 0;
+}
+.main-wrapper .top-header .nav-icon-wrapper.left .nav-icon {
+  margin-left: auto;
+  margin-right: 1.5rem;
 }
 .main-wrapper .main-content {
   padding: 4.5rem 1rem 1rem;
