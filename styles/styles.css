@@ -266,3 +266,9 @@ div.group input[type="checkbox"]:checked + label,
 div.group input[type="radio"]:checked + label {
   background: linear-gradient(to bottom, #e5e5e5 0%, #d0d0d0 100%);
 }
+.input input + label {
+  font-size: 0.75rem;
+  position: relative;
+  top: -0.25rem;
+  padding-left: 0.5rem;
+}
