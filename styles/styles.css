@@ -109,6 +109,9 @@ html {
 .main-wrapper .main-content > ul {
   list-style: none;
 }
+/* == Colors == */
+/* == Screen Sizes == */
+/* == Sizes == */
 .main-nav {
   position: fixed;
   top: 0;
@@ -271,4 +274,5 @@ div.group input[type="radio"]:checked + label {
   position: relative;
   top: -0.25rem;
   padding-left: 0.5rem;
+  display: none;
 }
