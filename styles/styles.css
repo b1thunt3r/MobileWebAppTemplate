@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Open+Sans:400,700");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
-/* == Colors == */
-/* == Screen Sizes == */
-/* == Sizes == */
 body,
 html,
 header,
@@ -55,7 +52,7 @@ html {
   top: 0;
 }
 .main-wrapper .top-header.glued {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.65);
 }
 .main-wrapper .top-header h1 {
   font-size: 1.5rem;
@@ -109,9 +106,6 @@ html {
 .main-wrapper .main-content > ul {
   list-style: none;
 }
-/* == Colors == */
-/* == Screen Sizes == */
-/* == Sizes == */
 .main-nav {
   position: fixed;
   top: 0;
@@ -269,10 +263,10 @@ div.group input[type="checkbox"]:checked + label,
 div.group input[type="radio"]:checked + label {
   background: linear-gradient(to bottom, #e5e5e5 0%, #d0d0d0 100%);
 }
-.input input + label {
+.card .input input + label,
+ul .input input + label {
   font-size: 0.75rem;
   position: relative;
   top: -0.25rem;
   padding-left: 0.5rem;
-  display: none;
 }
